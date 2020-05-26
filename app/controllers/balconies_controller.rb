@@ -1,0 +1,2 @@
+class BalconiesController < ApplicationController
+end
