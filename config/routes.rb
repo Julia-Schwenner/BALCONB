@@ -5,10 +5,10 @@ Rails.application.routes.draw do
 
   get 'dashboard', to: 'pages#dashboard'
 
-  devise_for :users, controllers: { sessions: 'users/sessions', registrations: 'users/registrations' }
+  # devise_for :users, controllers: { sessions: 'users/sessions', registrations: 'users/registrations' }
     # if necessary, reviews nested
 
-  # resources :balconies, only: [ :index, :show, :new, :create ]
+  # resources :dogs, only: [ :index, :show, :new, :create ]
   # resources :bookings, only: [ :show, :new, :create ]
 
 end
