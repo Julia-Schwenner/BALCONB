@@ -2,3 +2,32 @@
 @import "alert";
 @import "avatar";
 @import "navbar";
+@import "cards";
+
+.page-container {
+  width: 80%;
+  margin: auto;
+  margin-top: 30px;
+  align-items: center;
+}
+
+.btn {
+ margin-top: 50px;
+ margin-left: 135px;
+}
+
+.btn a {
+  text-decoration: none;
+  color: white;
+}
+
+.btn a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+
