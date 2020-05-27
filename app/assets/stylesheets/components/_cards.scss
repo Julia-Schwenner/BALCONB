@@ -1,0 +1,36 @@
+.card-dog {
+  overflow: hidden;
+  height: 120px;
+  width: 70%;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  align-items: center;
+  margin: auto;
+  margin-top: 20px;
+}
+.card-dog img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}
+
+.card-dog a {
+  font-size: 20px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+  color: black;
+}
+
+.card-dog p {
+  font-size: 12px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+.card-dog .card-dog-infos {
+  padding: 16px;
+}

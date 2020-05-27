@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+puts "Creating some dogs..."
+
+
+User.create(email: "katha@icloud.com", password: "123456")
+
+Dog.create!(name: "Bello", address: "Tiergarten", price: 5, user_id: 1)
+Dog.create!(name: "Bowey", address: "United States", price: 10, user_id: 1)
+Dog.create!(name: "Loki", address: "Hamburg", price: 3, user_id: 1)
+Dog.create!(name: "Cherster", address: "Munich", price: 4, user_id: 1)
+
+puts "Finished!"
