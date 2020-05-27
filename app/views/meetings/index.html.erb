@@ -1,1 +1,33 @@
-<h1>List of your upcoming meetings...</h1>
+
+<div class="page-container">
+<h1>Prepare yourself to have a paw-some moment.</h1>
+<h2>Here are your upcoming meetings</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Dog's name</th>
+      <th>Price</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @meetings.each do |meeting| %>
+      <tr>
+        <td><%= meeting.date %></td>
+        <td><%= meeting.dog_id %></td>
+        <td><%= meeting.price %></td>
+        <td><%= link_to 'Show details', meeting %></td>
+        <td><%= link_to 'Cancel', meeting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Meeting', new_meeting_path %>
+
+</div>

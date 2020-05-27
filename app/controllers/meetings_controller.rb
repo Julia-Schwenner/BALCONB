@@ -2,6 +2,10 @@ class MeetingsController < ApplicationController
   def index
     @user_meetings = Meetings.all #where @user = current_user
   end
+  
+  def new
+    @meeting = Meeting.new
+  end
 
   def create
     @user = current_user
