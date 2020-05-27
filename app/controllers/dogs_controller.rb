@@ -8,6 +8,13 @@ skip_before_action :authenticate_user!, only: :index
 
   # def show
   # end
+  def destroy
+    @dogs = Dog.find(params[:id])
+    @dogs.destroy
+
+    # no need for app/views/restaurants/destroy.html.erb
+    redirect_to dogs_path
+  end
 
   private
 
