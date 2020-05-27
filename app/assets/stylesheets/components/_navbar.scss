@@ -1,6 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  height: 10vh;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +10,7 @@
 
 .navbar-lewagon .navbar-brand p {
   font-size: 50px;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }

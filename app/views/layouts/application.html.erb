@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>BALCONB</title>
+    <title>BARK'N'B</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -11,11 +11,12 @@
 
   <body>
     <%= render '/shared/navbar' %>
+    <%= render '/shared/searchbar' %>
     <%= yield %>
     <%= render '/shared/footer' %>
 
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+<!--       <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p> -->
 
   </body>
 </html>

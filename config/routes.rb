@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   # devise_for :users, controllers: { sessions: 'users/sessions', registrations: 'users/registrations' }
     # if necessary, reviews nested
 
-  resources :dogs, only: [ :index, :show, :new, :create ]
+  resources :dogs, only: [ :index, :show, :new, :create, :edit, :update, :destroy ]
+
   # resources :bookings, only: [ :show, :new, :create ]
 
 end

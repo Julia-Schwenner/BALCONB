@@ -3,6 +3,9 @@
 @import "avatar";
 @import "navbar";
 @import "cards";
+@import "buttons";
+@import "banner";
+@import "footer";
 
 .page-container {
   width: 80%;
@@ -11,25 +14,10 @@
   align-items: center;
 }
 
-.btn {
- margin-top: 50px;
- margin-left: 135px;
-}
-
-.btn a {
-  text-decoration: none;
-  color: white;
-}
-
-.btn a:hover {
-  text-decoration: none;
-  color: white;
-}
 
 h1 {
   font-size: 30px;
 }
 
-@import "banner";
-@import "footer";
+
 
