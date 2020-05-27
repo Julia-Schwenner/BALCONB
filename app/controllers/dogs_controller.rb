@@ -26,6 +26,18 @@ class DogsController < ApplicationController
   end
 
   def edit
+    #@user = current_user
+
+    #@dog = Dog.new(dog_params)
+    #@dog.user = @user
+    #if @dog.save
+     # redirect_to dogs_id_path
+    #else
+     #render :new
+    #end
+  end
+
+  def update
   end
 
   def destroy
