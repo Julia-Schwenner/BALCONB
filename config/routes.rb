@@ -10,5 +10,4 @@ Rails.application.routes.draw do
    # end
 
   resources :dogs, only: [ :index, :show, :new, :create, :edit, :update, :destroy ]
-
 end
