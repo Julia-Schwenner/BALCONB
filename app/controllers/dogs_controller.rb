@@ -1,6 +1,12 @@
 class DogsController < ApplicationController
 
-      
+   before_action :set_dog, only: [:show]
+   skip_before_action :authenticate_user!, only: :index
+
+  def index
+    @dogs = Dog.all
+  end
+
         #def show
         #end
       
@@ -19,8 +25,8 @@ class DogsController < ApplicationController
           end
         end
       
-        def edit
-        end
+       # def edit
+        #end
 
         private
       
@@ -29,5 +35,8 @@ class DogsController < ApplicationController
           params.require(:dog).permit(:name, :address, :description, :price)
         end
 
-end 
+      # def set_dog
+      #   @dog = Dog.find(params[:id])
+      # end
 
+end

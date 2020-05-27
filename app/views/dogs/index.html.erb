@@ -1,0 +1,20 @@
+<div class="page-container">
+<h1> Which of these lovely dogs will become your friend for a day? 🔍 </h1>
+
+
+<div class="dogs-container">
+  <% @dogs.each do |dog| %>
+<div class="card-dog">
+
+  <img src="https://images.pexels.com/photos/1564506/pexels-photo-1564506.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
+   <div class="card-dog-infos">
+  <%= link_to dog.name, dog_path(dog) %>
+  <p> from <%= dog.address %></p>
+</div>
+</div>
+  <% end %>
+
+
+<button class="btn btn-warning btn-sm"><%= link_to "Add your Dog",  new_dog_path %></button>
+</div>
+</div>
