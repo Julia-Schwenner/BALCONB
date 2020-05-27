@@ -1,6 +1,6 @@
 class MeetingsController < ApplicationController
   def index
-    @user_meetings = Meetings.all #where @user = current_user
+    @user_meetings = Meetings.all
   end
 
   def new
