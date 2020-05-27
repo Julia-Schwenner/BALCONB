@@ -1,0 +1,19 @@
+<div class="page-container">
+<h1> Get to know <%= @dog.name %> </h1>
+
+<div class="card-dog">
+
+  <img src="https://images.pexels.com/photos/1564506/pexels-photo-1564506.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
+   <div class="card-dog-infos">
+  <p> from <%= @dog.address %></p>
+  <p> Details: <%= @dog.description %></p>
+  <p> Cost per day: <%= @dog.price %>€</p>
+  <p> owned by <%= @dog.user_id %></p>
+</div>
+</div>
+
+
+
+<button class="btn btn-outline-secondary""><%= link_to "Book this dog",  root_path %></button>
+</div>
+</div>
