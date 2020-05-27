@@ -1,6 +1,11 @@
 class MeetingsController < ApplicationController
   def index
-    @user_meetings = Meetings.all
+    #Find the user we're creating the meeting for
+    #@user = User.find(params[:user_id])
+    # Asssociate the dog and the user
+    #@dog.user = @user
+    # Display all the meetings
+    @meeting = Meeting.all
   end
 
   def new
