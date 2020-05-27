@@ -18,8 +18,29 @@
     font-family: 'Poppins', sans-serif;
   }  
 
+
+  .btn-yours {
+    opacity: 0.5;
+    background-color: #fec92d;
+    color: white;
+    padding: 8px 25px;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .btn-yours:hover {
+    background-color: #fec92d;
+    color: white;
+    padding: 8px 25px;
+    border-radius: 4px;
+    opacity: 1;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+  }
+
 .btn-danger
  {
+  background-color: blueviolet;
   text-decoration: none;
   color: white;
   box-shadow: 0 0 5px rgba(0,0,0,0.2);
@@ -35,7 +56,7 @@
 }
 
 #listing {
-    margin-left: 20px;
+    color: gray;
     align-items: center;
     display: flex;
     margin: 30px;
