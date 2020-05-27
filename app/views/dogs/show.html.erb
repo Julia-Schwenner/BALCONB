@@ -1,14 +1,16 @@
 <div class="page-container">
 <h1> Get to know <%= @dog.name %> </h1>
 
-<div class="card-dog">
-
+<div class="card-dog-show">
   <img src="https://images.pexels.com/photos/1564506/pexels-photo-1564506.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
-   <div class="card-dog-infos">
+  <div class="card-dog-show-infos">
+    <div>
   <p> from <%= @dog.address %></p>
   <p> Details: <%= @dog.description %></p>
-  <p> Cost per day: <%= @dog.price %>€</p>
   <p> owned by <%= @dog.user_id %></p>
+  </div>
+  <p class="card-dog-show-pricing"> Cost per day: <%= @dog.price %>€</p>
+  <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-dog-user avatar-bordered" />
 </div>
 </div>
 
