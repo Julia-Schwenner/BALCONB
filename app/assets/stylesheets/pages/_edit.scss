@@ -47,23 +47,6 @@
     font-family: 'Poppins', sans-serif;
   }
 
-.btn-danger
- {
-  background-color: blueviolet;
-  text-decoration: none;
-  color: white;
-  box-shadow: 0 0 5px rgba(0,0,0,0.2);
-  border-radius: 5px;
-  font-family: 'Poppins', sans-serif;
-}
-.btn btn-danger:hover {
-  text-decoration: none;
-  color: white;
-  box-shadow: 0 0 5px rgba(0,0,0,0.2);
-  border-radius: 5px;
-  font-family: 'Poppins', sans-serif;
-}
-
 .btn btn-light {
     padding: 8px 25px;
     border-radius: 4px;
@@ -85,10 +68,20 @@
 #edit-form {
     color: gray;
     font-family: 'Poppins', sans-serif;
+    margin-top: 50px
   }
 
 
   .avatar-large {
-    width: 40px;
+    object-fit: cover;
+    width: 260px;
+    height: 260px;
     border-radius: 50%;
+    margin: -100px 1650px 150px 80px;
+    box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+    border: white 1px solid;
+  }
+
+  .placing-avatar {
+    
   }
