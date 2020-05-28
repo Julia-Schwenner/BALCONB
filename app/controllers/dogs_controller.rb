@@ -4,6 +4,32 @@ class DogsController < ApplicationController
 
   def index
     @dogs = Dog.all
+
+  #map
+    @dogs = Dog.geocoded
+    @markers = @dogs.map do |dog|
+      {
+        lat: dog.latitude,
+        lng: dog.longitude
+      }
+
+  #city search
+    if params[:query].present?
+      @dogs = Dog.where('address ILIKE ?', "%#{params[:query]}%")
+    else
+      @dogs = Dog.all
+    end
+
+  #price filtering
+    if params[:price] == 'below 10'
+      @dogs = Dog.where("price < 10")
+    elsif params[:price] == 'below 5'
+      @dogs = Dog.where("price < 5")
+    elsif params[:price] == 'free'
+      @dogs = Dog.where("price = 0")
+    else
+      @dogs = Dog.all
+    end
   end
 
   def show
@@ -28,13 +54,12 @@ class DogsController < ApplicationController
   end
 
   def update
-      if @dog.update(dog_params)
-        redirect_to dog_path(@dog)
-      else
-        render :edit
-      end
+    if @dog.update(dog_params)
+      redirect_to dog_path(@dog)
+    else
+      render :edit
+    end
   end
-
 
   def destroy
     @dogs = Dog.find(params[:id])
@@ -54,5 +79,4 @@ class DogsController < ApplicationController
   def set_dog
   @dog = Dog.find(params[:id])
   end
-
 end

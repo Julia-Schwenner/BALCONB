@@ -1,18 +1,28 @@
 <div class="page-container">
   <h1> Which of these lovely dogs will become your friend for a day? 🔍 </h1>
+  
+  <%= form_tag dogs_path, method: :get do %>
+    <%= select_tag(:price, options_for_select(["below 10", "below 5", "free"], selected: params[:price]), :include_blank => "Price") %>
+    <%= submit_tag "Filter!", class: "btn btn-flat" %>
+  <% end %>
 
-  <div class="dogs-container">
-    <% @dogs.each do |dog| %>
-      <div class="card-dog">
+<div class="dogs-container">
+  <% @dogs.each do |dog| %>
+<div class="card-dog">
 
-        <%= image_tag "dogs/#{rand(1..12)}.jpg" %>
-        <div class="card-dog-infos">
-        <%= link_to dog.name, dog_path(dog) %>
-        <p>living in <%= dog.address %></p>
-        </div>
-      </div>
-    <% end %>
+  <%= image_tag "dogs/#{rand(1..12)}.jpg" %>
+   <div class="card-dog-infos">
+  <%= link_to dog.name, dog_path(dog) %>
+  <p>living in <%= dog.address %></p>
+  <p> Price: <%= dog.price %></p>
+</div>
+</div>
+  <% end %>
 
-  </div>
+ <div id="map"
+     style="width: 100%; height: 600px;"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+</div>
 </div>
 <br>
