@@ -9,7 +9,7 @@
     <div class="col-6">
 <!--     <p>Price per day: @dog.price %></p> -->
     <div id="listing">
-                <%= simple_form_for [ @meeting ] do |f| %>
+                <%= simple_form_for ([ @dog, @meeting ]) do |f| %>
                     <%= f.input :dates %>
                     <%= f.input :start_time %>
                     <%= f.input :end_time %>

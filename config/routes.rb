@@ -3,11 +3,14 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   root to: "pages#home"
 
-  get 'dashboard', to: 'pages#dashboard'
+  # get 'dashboard', to: 'pages#dashboard'
 
   # devise_for :users, controllers: { sessions: 'users/sessions', registrations: 'users/registrations' } do
-  resources :meetings, only: [ :index, :show, :new, :create ]
-   # end
+  resources :dogs, only: [:index, :show, :new, :create, :edit, :update, :destroy] do
+    resources :meetings, only: [:new, :create]
+  end
 
-  resources :dogs, only: [ :index, :show, :new, :create, :edit, :update, :destroy ]
+    # get 'index', to: 'meetings#index'
+
+  resources :meetings, only: [:index, :destroy]
 end

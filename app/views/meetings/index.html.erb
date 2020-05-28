@@ -3,26 +3,26 @@
 <h1>Prepare yourself to have a paw-some moment.</h1>
 <h3>Here are your upcoming meetings</h3>
 
-<table>
-  <thead>
-    <tr>
-      <th>📅 Date</th>
-      <th>Dog's name</th>
-      # @meeting.dog_id
-      <th>💲Price</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @meeting.each do |meeting| %>
-    <% end %>
-  </tbody>
-</table>
+<% @meetings.each do |meeting| %>
+  <table>
+    <thead>
+      <th colspan="3">
+      <tr>
+        <th>📅 Date</th>
+        <td><%= meeting.dates %></td>
+        <th>Dog's name</th>
+        <td><%= meeting.dog_id %></td>
+        <th>💲Price</th>
+        <td><%= meeting.price %></td>
+        <td><%= link_to 'Cancel', meeting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      </th>
+    </thead>
+  </table>
+<% end %>
 
 <br>
 
-<%= link_to 'New Meeting', new_meeting_path %>
 
 </div>
 
