@@ -17,9 +17,9 @@ class MeetingsController < ApplicationController
   end
 
   def create
+    set_dog
     @user = current_user
     @price = @dog.price
-    set_dog
     @meeting = Meeting.new(meeting_params)
     @meeting.user_id = current_user.id
     @meeting.dog = @dog
@@ -29,6 +29,14 @@ class MeetingsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def destroy
+    @meetings = Meeting.find(params[:id])
+    @meetings.destroy
+
+    # no need for app/views/restaurants/destroy.html.erb
+    redirect_to meetings_pathnotice: 'This meeting was cancelled.'
   end
 
   private

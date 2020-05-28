@@ -8,13 +8,13 @@
     <thead>
       <th colspan="3">
       <tr>
-        <th>📅 Date</th>
+        <th>📅 </th>
         <td><%= meeting.dates %></td>
-        <th>Dog's name</th>
-        <td><%= meeting.dog_id %></td>
-        <th>💲Price</th>
+        <th> 🐕</th>
+        <td><%= meeting.dog.name %></td>
+        <th>💲 </th>
         <td><%= meeting.price %></td>
-        <td><%= link_to 'Cancel', meeting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to '🗑', meeting, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       </th>
     </thead>
