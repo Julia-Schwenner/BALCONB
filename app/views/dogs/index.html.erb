@@ -5,7 +5,7 @@
   <% @dogs.each do |dog| %>
 <div class="card-dog">
 
-  <%= image_tag "dogs/#{rand(1..10)}.jpg" %>
+  <%= image_tag "dogs/#{rand(1..12)}.jpg" %>
    <div class="card-dog-infos">
   <%= link_to dog.name, dog_path(dog) %>
   <p>living in <%= dog.address %></p>
