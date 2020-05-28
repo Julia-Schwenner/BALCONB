@@ -5,6 +5,14 @@ class DogsController < ApplicationController
   def index
     @dogs = Dog.all
 
+  #map
+    @dogs = Dog.geocoded
+    @markers = @dogs.map do |dog|
+      {
+        lat: dog.latitude,
+        lng: dog.longitude
+      }
+
   #city search
     if params[:query].present?
       @dogs = Dog.where('address ILIKE ?', "%#{params[:query]}%")
