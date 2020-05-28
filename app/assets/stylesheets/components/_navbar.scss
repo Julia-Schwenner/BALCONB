@@ -2,10 +2,13 @@
   justify-content: space-between;
   background: white;
   height: 10vh;
+  align-items: center;
+  
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
+  
 }
 
 .navbar-lewagon .navbar-brand p {
@@ -20,7 +23,12 @@ a {
   color: grey;
 }
 
-a:hover {
-  color: black;
+.nav-link:hover {
+  color: #FEC92D;
   text-decoration: none;
+}
+#brand {
+  color: #FEC92D;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
 }
