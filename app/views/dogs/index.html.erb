@@ -1,17 +1,18 @@
 <div class="page-container">
-<h1> Which of these lovely dogs will become your friend for a day? 🔍 </h1>
+  <h1> Which of these lovely dogs will become your friend for a day? 🔍 </h1>
 
-<div class="dogs-container">
-  <% @dogs.each do |dog| %>
-<div class="card-dog">
+  <div class="dogs-container">
+    <% @dogs.each do |dog| %>
+      <div class="card-dog">
 
-  <%= image_tag "dogs/#{rand(1..12)}.jpg" %>
-   <div class="card-dog-infos">
-  <%= link_to dog.name, dog_path(dog) %>
-  <p>living in <%= dog.address %></p>
-</div>
-</div>
-  <% end %>
+        <%= image_tag "dogs/#{rand(1..12)}.jpg" %>
+        <div class="card-dog-infos">
+        <%= link_to dog.name, dog_path(dog) %>
+        <p>living in <%= dog.address %></p>
+        </div>
+      </div>
+    <% end %>
 
+  </div>
 </div>
-</div>
+<br>
