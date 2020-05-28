@@ -1,5 +1,5 @@
 class DogsController < ApplicationController
-  before_action :set_dog, only: [:show, :edit]
+  before_action :set_dog, only: [:show, :edit, :update]
   skip_before_action :authenticate_user!, only: [:show, :index]
 
   def index
@@ -15,7 +15,6 @@ class DogsController < ApplicationController
 
   def create
     @user = current_user
-
     @dog = Dog.new(dog_params)
     @dog.user = @user
     if @dog.save
@@ -26,19 +25,16 @@ class DogsController < ApplicationController
   end
 
   def edit
-    #@user = current_user
-
-    #@dog = Dog.new(dog_params)
-    #@dog.user = @user
-    #if @dog.save
-     # redirect_to dogs_id_path
-    #else
-     #render :new
-    #end
   end
 
   def update
+      if @dog.update(dog_params)
+        redirect_to dog_path(@dog)
+      else
+        render :edit
+      end
   end
+
 
   def destroy
     @dogs = Dog.find(params[:id])

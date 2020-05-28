@@ -38,6 +38,15 @@
     font-family: 'Poppins', sans-serif;
   }
 
+  .btn-yours-orange {
+    opacity: 0.5;
+    background-color: orange;
+    color: white;
+    padding: 8px 25px;
+    border-radius: 4px;
+    font-family: 'Poppins', sans-serif;
+  }
+
 .btn-danger
  {
   background-color: blueviolet;
@@ -55,6 +64,11 @@
   font-family: 'Poppins', sans-serif;
 }
 
+.btn btn-light {
+    padding: 8px 25px;
+    border-radius: 4px;
+}
+
 #listing {
     color: gray;
     align-items: center;
@@ -67,3 +81,14 @@
     border-radius: 20px;
     font-family: 'Poppins', sans-serif;
 }
+
+#edit-form {
+    color: gray;
+    font-family: 'Poppins', sans-serif;
+  }
+
+
+  .avatar-large {
+    width: 40px;
+    border-radius: 50%;
+  }
