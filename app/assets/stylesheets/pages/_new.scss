@@ -56,7 +56,7 @@
 }
 
 #listing {
-    color: gray;
+    color: #fec92d;
     align-items: center;
     display: flex;
     margin: 30px;
@@ -66,4 +66,10 @@
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
     border-radius: 20px;
     font-family: 'Poppins', sans-serif;
+}
+
+
+.btn btn-light {
+  padding: 8px 25px;
+  border-radius: 4px;
 }
