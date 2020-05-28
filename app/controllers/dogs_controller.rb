@@ -80,3 +80,4 @@ class DogsController < ApplicationController
   @dog = Dog.find(params[:id])
   end
 end
+end 
