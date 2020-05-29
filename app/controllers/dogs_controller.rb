@@ -74,11 +74,10 @@ class DogsController < ApplicationController
 
   #strong params
   def dog_params
-    params.require(:dog).permit(:name, :address, :description, :price)
+    params.require(:dog).permit(:name, :address, :description, :price, :photo)
   end
 
   def set_dog
   @dog = Dog.find(params[:id])
   end
 end
-

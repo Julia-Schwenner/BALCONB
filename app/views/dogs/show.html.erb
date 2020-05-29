@@ -3,7 +3,12 @@
 
 
 <div class="card-dog-show">
-  <img src="https://images.pexels.com/photos/1564506/pexels-photo-1564506.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
+    <% if @dog.photo.attached? %>
+      <%= cl_image_tag @dog.photo.key, crop: :fill %>
+    <% else %>
+      <%= image_tag "dogs/#{rand(1..12)}.jpg" %>
+    <% end %>
+
   <div class="card-dog-show-infos">
     <div>
   <p> address: <%= @dog.address %></p>
