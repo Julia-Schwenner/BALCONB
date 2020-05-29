@@ -14,23 +14,26 @@ class DogsController < ApplicationController
       }
     end
 
-  #city search
-    if params[:query].present?
-      @dogs = Dog.where('address ILIKE ?', "%#{params[:query]}%")
-    else
-      @dogs = Dog.all
-    end
 
-  #price filtering
-    if params[:price] == 'below 10'
-      @dogs = Dog.where("price < 10")
-    elsif params[:price] == 'below 5'
-      @dogs = Dog.where("price < 5")
-    elsif params[:price] == 'free'
-      @dogs = Dog.where("price = 0")
-    else
-      @dogs = Dog.all
-    end
+        #city search
+          if params[:query].present?
+            @dogs = Dog.where('address ILIKE ?', "%#{params[:query]}%")
+          else
+            @dogs = Dog.all
+          end
+  
+
+          #price filtering
+            if params[:price] == 'below 10'
+              @dogs = Dog.where("price < 10")
+            elsif params[:price] == 'below 5'
+              @dogs = Dog.where("price < 5")
+            elsif params[:price] == 'free'
+              @dogs = Dog.where("price = 0")
+            else
+              @dogs = Dog.all
+            end
+        end
   end
 
   def show
@@ -70,7 +73,7 @@ class DogsController < ApplicationController
     redirect_to dogs_path
   end
 
-  private
+  private 
 
   #strong params
   def dog_params
@@ -80,4 +83,6 @@ class DogsController < ApplicationController
   def set_dog
   @dog = Dog.find(params[:id])
   end
+
 end
+
