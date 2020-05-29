@@ -3,7 +3,7 @@ class DogsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show, :index]
 
   def index
-    @dogs = Dog.all
+    # @dogs = Dog.all
 
   #map
     @dogs = Dog.geocoded
@@ -12,6 +12,7 @@ class DogsController < ApplicationController
         lat: dog.latitude,
         lng: dog.longitude
       }
+    end
 
   #city search
     if params[:query].present?
@@ -20,16 +21,17 @@ class DogsController < ApplicationController
       @dogs = Dog.all
     end
 
-  #price filtering
-    if params[:price] == 'below 10'
-      @dogs = Dog.where("price < 10")
-    elsif params[:price] == 'below 5'
-      @dogs = Dog.where("price < 5")
-    elsif params[:price] == 'free'
-      @dogs = Dog.where("price = 0")
-    else
-      @dogs = Dog.all
-    end
+
+    #price filtering
+      if params[:price] == 'below 10'
+        @dogs = Dog.where("price < 10")
+      elsif params[:price] == 'below 5'
+        @dogs = Dog.where("price < 5")
+      elsif params[:price] == 'free'
+        @dogs = Dog.where("price = 0")
+      else
+        @dogs = Dog.all
+      end
   end
 
   def show
@@ -73,11 +75,10 @@ class DogsController < ApplicationController
 
   #strong params
   def dog_params
-    params.require(:dog).permit(:name, :address, :description, :price)
+    params.require(:dog).permit(:name, :address, :description, :price, :photo)
   end
 
   def set_dog
   @dog = Dog.find(params[:id])
   end
 end
-end 

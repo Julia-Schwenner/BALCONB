@@ -4,6 +4,8 @@
 @import "navbar";
 @import "cards";
 @import "searchbar";
+@import "banner";
+@import "footer";
 
 .page-container {
   width: 80%;
@@ -15,17 +17,16 @@
 
 }
 
-.btn {
- margin-top: 50px;
- margin-left: 135px;
-}
-
 .btn a {
+  margin-top: 50px;
+  margin-left: 135px;
   text-decoration: none;
   color: white;
 }
 
 .btn a:hover {
+  margin-top: 50px;
+  margin-left: 135px;
   text-decoration: none;
   color: white;
 }
@@ -34,6 +35,6 @@
   text-align: center;
 }
 
-@import "banner";
-@import "footer";
-
+h1 {
+  color: gray
+}
