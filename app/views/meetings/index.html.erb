@@ -9,7 +9,7 @@
 <div class="card-dog">
 
   <% if meeting.dog.photo.attached? %>
-      <%= cl_image_tag dog.photo.key, crop: :fill %>
+      <%= cl_image_tag meeting.dog.photo.key, crop: :fill %>
     <% else %>
       <%= image_tag "dogs/#{rand(1..12)}.jpg" %>
     <% end %>
