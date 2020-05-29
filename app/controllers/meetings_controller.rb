@@ -36,7 +36,7 @@ class MeetingsController < ApplicationController
     @meetings.destroy
 
     # no need for app/views/restaurants/destroy.html.erb
-    redirect_to meetings_pathnotice: 'This meeting was cancelled.'
+    redirect_to meetings_path, notice: 'This meeting was cancelled.'
   end
 
   private

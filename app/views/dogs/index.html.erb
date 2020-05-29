@@ -1,6 +1,6 @@
 <div class="page-container">
-  <h1> Which of these lovely dogs will become your friend for a day? 🔍 </h1>
-
+  <h1> Which of these lovely dogs will become your friend for a day? </h1>
+  
   <%= form_tag dogs_path, method: :get do %>
   <%= select_tag(:price, options_for_select(["below 10", "below 5", "free"], selected: params[:price]), :include_blank => "Price") %>
   <%= submit_tag "Filter!", class: "btn btn-flat" %>

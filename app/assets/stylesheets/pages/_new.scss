@@ -18,26 +18,6 @@
     font-family: 'Poppins', sans-serif;
   }  
 
-
-  .btn-yours {
-    opacity: 0.5;
-    background-color: #fec92d;
-    color: white;
-    padding: 8px 25px;
-    border-radius: 4px;
-    font-family: 'Poppins', sans-serif;
-  }
-
-  .btn-yours:hover {
-    background-color: #fec92d;
-    color: white;
-    padding: 8px 25px;
-    border-radius: 4px;
-    opacity: 1;
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-  }
-
 .btn-danger
  {
   background-color: blueviolet;
@@ -72,4 +52,8 @@
 .btn btn-light {
   padding: 8px 25px;
   border-radius: 4px;
+}
+
+#header-yellow {
+color: #fec92d;
 }
