@@ -16,8 +16,9 @@
 
    <div class="card-dog-infos">
   <h5> <%= meeting.dog.name %> </h5>
-  <h6> 📅 Meeting you on the <%= meeting.dates %></h6>
-  <h6> 💲 Price: <%= meeting.price %></h6>
+  <p> 📅 Meeting you on the <%= meeting.dates %></p>
+  <p> from <%= meeting.start_time.strftime("%I:%M %p")  %> to <%= meeting.end_time.strftime("%I:%M %p") %></p>
+  <p> 💲 Price: <%= meeting.price %></p>
   <p><%= link_to '🗑 Cancel meeting ', meeting, method: :delete, data: { confirm: 'Are you sure?' } %></p>
 </div>
 </div>
