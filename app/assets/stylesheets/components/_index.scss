@@ -17,21 +17,24 @@
 
 }
 
+
 .btn a {
-  margin-top: 50px;
-  margin-left: 135px;
+  padding: 10px;
   text-decoration: none;
   color: white;
+  background-color: #FEC92D;
+  font-weight: bold;
+  border-radius: 4px;
 }
 
 .btn a:hover {
-  margin-top: 50px;
-  margin-left: 135px;
   text-decoration: none;
   color: white;
+  background-color: #FEC92D;
+  opacity: 50;
 }
 
-.align-icons { 
+.align-icons {
   text-align: center;
 }
 
