@@ -1,20 +1,24 @@
 <div class="page-container">
   <h1> Get to know <%= @dog.name %> </h1>
 
+<div class="card-dog-show">
+    <% if @dog.photo.attached? %>
+      <%= cl_image_tag @dog.photo.key, crop: :fill %>
+    <% else %>
+      <%= image_tag "dogs/#{rand(1..12)}.jpg" %>
+    <% end %>
 
-  <div class="card-dog-show">
-    <img src="https://images.pexels.com/photos/1564506/pexels-photo-1564506.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
     <div class="card-dog-show-infos">
       <div>
-    <p> address: <%= @dog.address %></p>
-    <p> description: <%= @dog.description %></p>
-    <p> owner: <%= @dog.user_id %></p>
+        <p> address: <%= @dog.address %></p>
+        <p> description: <%= @dog.description %></p>
+        <p> owner: <%= @dog.user_id %></p>
+      </div>
+       <p class="card-dog-show-pricing"> Cost per day: <%= @dog.price %>€</p>
+      <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-dog-user avatar-bordered" />
     </div>
-    <p class="card-dog-show-pricing"> Cost per day: <%= @dog.price %>€</p>
-    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-dog-user avatar-bordered" />
   </div>
-  </div>
-
+  
   <div class="flex-container"> 
   <button class="btn btn-outline-secondary flex-item"><%= link_to "Back to all dogs",  dogs_path %></button>
   <button class="btn btn-outline-secondary flex-item"><%= link_to "Book this dog",  new_dog_meeting_path(@dog) %></button>
