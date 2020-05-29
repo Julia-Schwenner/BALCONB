@@ -12,14 +12,14 @@
       <div>
         <p> address: <%= @dog.address %></p>
         <p> description: <%= @dog.description %></p>
-        <p> owner: <%= @dog.user_id %></p>
       </div>
-       <p class="card-dog-show-pricing"> Cost per day: <%= @dog.price %>€</p>
+        <p> contact owner: <%= @dog.user.email %></p>
+       <p class="card-dog-show-pricing"> cost per day: <%= @dog.price %>€</p>
       <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-dog-user avatar-bordered" />
     </div>
   </div>
-  
-  <div class="flex-container"> 
+
+  <div class="flex-container">
   <button class="btn btn-outline-secondary flex-item"><%= link_to "Back to all dogs",  dogs_path %></button>
   <button class="btn btn-outline-secondary flex-item"><%= link_to "Book this dog",  new_dog_meeting_path(@dog) %></button>
   <button class="btn btn-outline-secondary flex-item"><%= link_to "Edit this dog",  edit_dog_path %></button>
