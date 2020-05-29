@@ -3,7 +3,7 @@ class DogsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:show, :index]
 
   def index
-    @dogs = Dog.all
+    # @dogs = Dog.all
 
   #map
     @dogs = Dog.geocoded
