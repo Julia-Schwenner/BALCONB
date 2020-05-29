@@ -1,7 +1,9 @@
 .card-dog {
   overflow: hidden;
+
   height: 130px;
   width: 70%;
+
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: flex;
@@ -11,6 +13,7 @@
   margin-bottom: 20px;
   display: flex;
 }
+
 .card-dog img {
   height: 100%;
   width: 120px;
