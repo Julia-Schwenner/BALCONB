@@ -13,6 +13,7 @@ class DogsController < ApplicationController
         lng: dog.longitude
       }
     end
+
   #city search
     if params[:query].present?
       @dogs = Dog.where('address ILIKE ?', "%#{params[:query]}%")
@@ -73,7 +74,7 @@ class DogsController < ApplicationController
 
   #strong params
   def dog_params
-    params.require(:dog).permit(:name, :address, :description, :price)
+    params.require(:dog).permit(:name, :address, :description, :price, :photo)
   end
 
   def set_dog
