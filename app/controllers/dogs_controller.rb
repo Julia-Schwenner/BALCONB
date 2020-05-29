@@ -12,6 +12,7 @@ class DogsController < ApplicationController
         lat: dog.latitude,
         lng: dog.longitude
       }
+    end
 
   #city search
     if params[:query].present?
@@ -80,4 +81,4 @@ class DogsController < ApplicationController
   @dog = Dog.find(params[:id])
   end
 end
-end 
+
