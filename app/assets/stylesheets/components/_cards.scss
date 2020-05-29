@@ -7,7 +7,9 @@
   display: flex;
   align-items: center;
   margin: auto;
-  margin-top: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: flex;
 }
 .card-dog img {
   height: 100%;
@@ -54,11 +56,18 @@
 }
 
 .card-dog-show p {
-  font-size: 18px;
+  font-size: 15px;
   opacity: .7;
   margin: 0;
 }
 
+.card-dog .card-dog-infos {
+  margin-left: 10%;
+}
+
+.card-dog .card-dog-infos a{
+  font-size: 15px;
+}
 
 .card-dog-show .card-dog-show-infos {
   padding: 16px;

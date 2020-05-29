@@ -14,8 +14,8 @@ puts "Creating some dogs..."
 
 user = User.create(email: "katha@icloud.com", password: "123456")
 
-Dog.create!(name: "Bello", address: "Tiergarten", price: 5, user_id: user.id)
-Dog.create!(name: "Bowey", address: "United States", price: 10, user_id: user.id)
+Dog.create!(name: "Bello", address: "Berlin", price: 5, user_id: user.id)
+Dog.create!(name: "Bowey", address: "Kreuzberg, Germany", price: 10, user_id: user.id)
 Dog.create!(name: "Loki", address: "Hamburg", price: 3, user_id: user.id)
 Dog.create!(name: "Cherster", address: "Munich", price: 4, user_id: user.id)
 
