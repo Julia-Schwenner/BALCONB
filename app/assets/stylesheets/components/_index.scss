@@ -4,36 +4,40 @@
 @import "navbar";
 @import "cards";
 @import "searchbar";
+@import "banner";
+@import "footer";
 
 .page-container {
   width: 80%;
   margin: auto;
-  margin-top: 30px;
+  padding-top: 30px;
   align-items: center;
   text-align: center;
-  height: 546px;
+  min-height: 80vh;
 
 }
 
-.btn {
- margin-top: 50px;
- margin-left: 135px;
-}
 
 .btn a {
+  padding: 10px;
   text-decoration: none;
   color: white;
+  background-color: #FEC92D;
+  font-weight: bold;
+  border-radius: 4px;
 }
 
 .btn a:hover {
   text-decoration: none;
   color: white;
+  background-color: #FEC92D;
+  opacity: 50;
 }
 
-.align-icons { 
+.align-icons {
   text-align: center;
 }
 
-@import "banner";
-@import "footer";
-
+h1 {
+  color: gray
+}
