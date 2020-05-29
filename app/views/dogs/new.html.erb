@@ -8,7 +8,7 @@
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-6">
-    
+
     <div id="listing">
       <h1>Your dog's details</h1>
 
@@ -17,6 +17,7 @@
                     <%= f.input :description, placeholder: ' Playful and energetic...' %>
                     <%= f.input :address, placeholder: ' Isle of Dog' %>
                     <%= f.input :price, placeholder: 0 %>
+                    <%= f.input :photo, as: :file %>
                     <br>
                     <div class="mt-3 d-flex">
                     <%= f.submit "Add", class: "btn-yours" %>
